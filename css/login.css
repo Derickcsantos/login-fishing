@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+#login {
+    max-width: 560px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+#campoImagem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#campoImagem img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#login input{
+    padding: 15px;
+    border-radius: 3px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.1s ease;
+}
+
+#login input:hover{
+    border: 1px solid #000;
+}
+
+#login input:focus{
+    border: 1px solid #00e676;
+    outline: none;
+}
+
+#login #recaptcha{
+    margin: 20px 0 20px 10px;
+    width: 240px;
+    height: 63px;
+}
+
+h1{
+    font-family: 'Publico', Bold;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 20px;
+}
+
+#login p{
+    text-align: center;
+    padding: 20px;
+    color: rgba(18, 18, 18, 0.87);
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+#entrar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#entrar a{
+    position: relative;
+    font-size: 8px;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+    padding: 5px;
+    color: #717171;
+    font-family: roboto, sans-serif;
+    font-weight: 600;
+}
+
+#entrar a:hover{
+    color:rgba(0, 0, 0, 0.87);
+}
+
+#entrar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* espaço entre o texto e o underline */
+    width: 100%;
+    height: 1px; /* espessura da linha */
+    background-color: #00e676; 
+}
+
+#entrar button{
+    border-radius: 25px;
+    padding: 10px;
+    width: 150px;
+    height: 45px;
+    border: 1px solid #ccc;   
+    background-color: #00E08E;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 10px;
+    font-weight: 700;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.068);
+    transition: 0.5s ease;
+}
+
+#entrar button:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.24);
+}
+
+@media (width < 512px){
+    #login{
+        top: 50%;
+    }
+}
+
+@media (width < 380px){
+    #login{
+        height: 100%;
+        margin: 5px;
+        width: 90%;
+        padding: 0px;
+    }
+
+    #entrar{
+        padding: 2px;
+        margin: 5px;
+    }
+
+    #entrar button{
+        width: 50%;
+    }
+}
